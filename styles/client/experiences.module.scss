@@ -1,0 +1,58 @@
+@import '../variables.scss';
+
+.container {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    max-width: 100%;
+    height: 260px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    div:first-child {
+        width: 250px;
+        max-width: 100%;
+        height: 120px;
+    }
+    div:nth-child(2) {
+        font-size: 16px;
+        margin-top: 20px;
+        text-align: center;
+        color: $light-primary-text-color;
+    }
+    div:last-child {
+        font-size: 14px;
+        margin-top: 15px;
+        text-align: center;
+        color: $light-secondary-text-color;
+        span {
+            color: $primary-color;
+        }
+    }
+}
+
+.logo {
+    object-fit: contain;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        margin-top: 20px;
+    }
+    
+    .card {
+        max-width: auto;
+        div:first-child {
+            width: 280px;
+            max-width: auto;
+            height: 150px;
+        }
+    }
+}

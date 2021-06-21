@@ -1,0 +1,45 @@
+@import '../variables.scss';
+
+.container {
+    padding: 20px;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: $light-primary-text-color;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+    &::after {
+        background: $primary-color;
+        border-radius: inherit;
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-100%, 0) rotate(10deg);
+        transform-origin: top left;
+        transition: .2s transform ease-out;
+        will-change: transform;
+        z-index: -1;
+    }
+    &:hover::after {
+        transform: translate(0, 0);
+    }
+    &:hover {
+        border: 2px solid transparent;
+        color: #ffffff;
+        transform: scale(1.05);
+        will-change: transform;
+    }
+}

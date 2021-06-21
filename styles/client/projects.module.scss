@@ -1,0 +1,149 @@
+@import '../variables.scss';
+
+.container {
+    margin-top: 15px;
+    display: grid;
+    max-width: max-content;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 100%;
+    height: 'max-content';
+    padding: 20px;
+    border-radius: 12px;
+    text-align: left;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.05);
+    div {
+        div:first-child {
+            font-size: 22px;
+            font-weight: 700;
+        }
+        div:nth-child(2) {
+            line-height: 20px;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 8px;
+        }
+    }
+}
+
+.button {
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    width: max-content;
+    padding: 8px 12px;
+    font-size: 14px !important;
+    margin-top: 15px;
+    text-transform: initial;
+    letter-spacing: unset;
+    &::after {
+        background: #ffffff;
+    }
+    &:hover {
+        color: #212F3D;
+    }
+}
+
+.buttonLightTheme {
+    border: 2px solid #212F3D;
+    color: #212F3D;
+    &::after {
+        background: #212F3D;
+    }
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+.cardLightTheme {
+    color: #212F3D;
+}
+
+.exploreMoreCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background: $primary-color;
+    width: 180px;
+    max-width: 100%;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 5px 10px;
+    margin: 0 auto;
+    div:first-child {
+        width: 30px;
+        height: 30px;
+    }
+    div:last-child {
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+}
+
+.exploreMoreCard:hover {
+    transform: scale(1.05)
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        margin-top: 20px;
+        grid-template-columns: auto auto auto;
+        grid-gap: 25px;
+        margin: 0 auto;
+    }
+    
+    .card {
+        width: 380px;
+        height: 240px;
+        div {
+            div:first-child {
+                font-size: 26px;
+            }
+            div:nth-child(2) {
+                line-height: 22px;
+                font-size: 15px;
+                margin-top: 10px;
+            }
+        }
+    }
+    
+    .button {
+        padding: 10px 15px;
+        font-size: 16px !important;
+        margin-top: 20px;
+    }
+    
+    .exploreMoreCard {
+        flex-direction: column;
+        background: transparent;
+        width: 380px;
+        height: 240px;
+        max-width: auto;
+        border-radius: 12px;
+        color: #333;
+        padding: 0;
+        margin: 0;
+        div:first-child {
+            width: 100px;
+            height: 100px;
+        }
+        div:last-child {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 10px;
+            margin-left: 0;
+        }
+    }
+}
