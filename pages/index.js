@@ -53,7 +53,7 @@ const Home = () => {
       <div className={styles.topSection}>
         <div className={styles.imageSection}>
           <Image 
-            src={`https://drive.google.com/uc?export=view&id=${image}`}
+            src={`https://drive.google.com/uc?export=view&id=1gVe469kPJ1XajFV-FE1miq7dqVKcR9WA`}
             alt={time}
             className={styles.image}
             height={250}
@@ -69,10 +69,18 @@ const Home = () => {
       <div className={styles.buttonSection}>
         <Button text='Say Hello' customClass={styles.button} />
       </div>
-      <Section header='Skills' content='Skills Data'>
+      <Section 
+        header='Skills' 
+        content='Skills Data'
+        customClass={styles.skillsSection}
+      >
         <Skills />
       </Section>
-      <Section header='Projects' subHeader={PROJECTS_SUB_HEADER} subHeaderCustomClass={styles.projectsSubHeader}>
+      <Section 
+        header='Projects' 
+        subHeader={PROJECTS_SUB_HEADER} 
+        subHeaderCustomClass={styles.projectsSubHeader}
+      >
         <Projects />
       </Section>
       <Section subHeader={EXPERIENCES_SUB_HEADER}>

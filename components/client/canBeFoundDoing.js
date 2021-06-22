@@ -28,6 +28,9 @@ const canBeFoundDoingData = [
     }
 ]
 
+const primaryColor = '#8E44AD'
+const secondaryColor = '#D7BDE2'
+
 const CanBeFoundDoing = () => {
     if (!canBeFoundDoingData || !canBeFoundDoingData.length) return null
     return (
@@ -35,7 +38,7 @@ const CanBeFoundDoing = () => {
             {canBeFoundDoingData.map((item, idx) => {
                 const degree = (360 / 100) * item.percent
                 const customStyles = {
-                    backgroundImage: `conic-gradient(pink ${degree}deg, indigo 0)`
+                    backgroundImage: `conic-gradient(${primaryColor} ${degree}deg, ${secondaryColor} 0)`
                 }
                 return (
                     <div key={idx} className={styles.item}>

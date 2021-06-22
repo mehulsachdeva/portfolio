@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/about.module.scss'
 import Section from '../components/shared/section'
 import CanBeFoundDoing from '../components/client/canBeFoundDoing'
+import WouldRather from '../components/client/wouldRather'
 
 const About = () => {
     return (
@@ -24,6 +25,9 @@ const About = () => {
             </div>
             <Section subHeader='Can Be Found Doing'>
                 <CanBeFoundDoing />
+            </Section>
+            <Section subHeader='I Would Rather...'>
+                <WouldRather />
             </Section>
         </div>
     )
